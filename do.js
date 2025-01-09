@@ -27,3 +27,24 @@ do{
     console.log("El contador está en ", contadordowhile);
     contadordowhile++;
 } while (contadordowhile <= 10);
+
+//Ejemplo: Sumar números ingresados por el usuario
+console.log("Comienza el programa: Suma de números.");
+
+//Variables iniciales
+let total = 0;
+let input;
+
+//Bucle do-while para asegurarse de que al menos una entrada sea procesada
+do {
+    input = parseFloat(prompt("Introduce un número (un número negativo para terminar):"));
+    if(!isNaN(input) && input >= 0) {
+        total += input; //Suma el número al total
+        console.log("Número introducido: ", input, ".Total acumulado: ", total);
+    } else if (isNaN(input)) {
+        console.log("no has introducido un número válido. Inténtalo de nuevo");
+    } 
+} while (input => 0);
+
+//Imprimir el total al finalizar
+console.log("Has terminado el programa. La suma total es: ", total);
